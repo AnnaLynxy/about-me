@@ -1,0 +1,27 @@
+{
+  "name": "anna-grigoriev-website",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "watch": "tsc --watch"
+  },
+  "author": "Anna Grigoriev",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.1",
+    "@vitejs/plugin-react": "4.3.4",
+    "prettier": "^3.5.3",
+    "typescript": "5.8.2",
+    "vite": "^6.2.4"
+  }
+}

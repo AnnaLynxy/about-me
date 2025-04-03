@@ -1,0 +1,93 @@
+import { FC } from "react";
+import styled from "@emotion/styled";
+
+/**
+ * Styles
+ */
+import { GlobalStyles } from "./styles/GlobalStyles";
+
+/**
+ * Components
+ */
+import { List } from "./components/List";
+import { Modal } from "./components/Modal";
+import { Header } from "./components/Header";
+import { Section } from "./components/Section";
+import { Exerience } from "./components/Experience";
+import { FixItModal } from "./components/FixItModal";
+import { Experiences } from "./components/Experiences";
+import { RainbowText } from "./components/RainbowText";
+import { IsBrokenProvider } from "./components/IsBrokenContext";
+
+const Container = styled.div({
+  display: "flex",
+  flexDirection: "column",
+  gap: 40,
+
+  "& > section:not(:last-child)": {
+    paddingBottom: 40,
+    borderBottom: "1px solid #eee",
+  },
+});
+
+const App: FC = () => (
+  <IsBrokenProvider>
+    <GlobalStyles />
+    <FixItModal />
+
+    <main>
+      <Header />
+      <h1>
+        Hi there! 👋
+        <br />
+        My name is Anna Grigoriev and I'm a{" "}
+        <RainbowText>Front-end Engineer</RainbowText>
+      </h1>
+
+      <Container>
+        <Section title="Main skills">
+          <List
+            listItemsView="tags"
+            flexDirection="row"
+            listItems={[
+              "React.js",
+              "JavaScript",
+              "TypeScript",
+              "GraphQL",
+              "Apollo",
+              "HTML/CSS",
+              "Bundlers: Webpack, Vite",
+              "Testing: Cypress, Jest, React Testing Library",
+              "Storybook",
+              "Auth0",
+            ]}
+          />
+        </Section>
+
+        <Experiences />
+
+        <Section title="Education">
+          <Exerience
+            jobTitle="BACHELOR, Computer Science"
+            company="Belarusian State University of
+Informatics and Radioelectronics"
+            startDate="2011"
+            endDate="2017"
+          />
+        </Section>
+
+        <Section title="3 things I'd like to highlight about myself:">
+          <List
+            listItems={[
+              "💫 Front-end engineering is my dream job because it lets me blend creativity, a passion for programming, and a tendency for structure things.",
+              " 📈 I create UIs that are accessible, responsive, consistent, and highly performant.",
+              " 🙋‍♀️ I take full ownership of my work and pride myself on being reliable, hardworking, and dedicated to delivering top-quality results.",
+            ]}
+          />
+        </Section>
+      </Container>
+    </main>
+  </IsBrokenProvider>
+);
+
+export default App;
