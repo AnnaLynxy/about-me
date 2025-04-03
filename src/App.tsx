@@ -81,7 +81,7 @@ Informatics and Radioelectronics"
             listItems={[
               "💫 Front-end engineering is my dream job because it lets me blend creativity, a passion for programming, and a tendency for structure things.",
               " 📈 I create UIs that are accessible, responsive, consistent, and highly performant.",
-              " 🙋‍♀️ I take full ownership of my work and pride myself on being reliable, hardworking, and dedicated to delivering top-quality results.",
+              " 🙋‍♀️ I take full ownership of my work and always strive to be reliable, hardworking, and committed to delivering top-quality results.",
             ]}
           />
         </Section>

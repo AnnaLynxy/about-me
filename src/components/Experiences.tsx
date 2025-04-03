@@ -57,14 +57,12 @@ const EXPERIENCES: ExperienceType[] = [
     company: "BuyerQuest",
     startDate: "01/2016",
     endDate: "09/2016",
-    description: [],
   },
   {
     jobTitle: "WEB DEVELOPER",
     company: "Astronim",
     startDate: "02/2014",
     endDate: "05/2015",
-    description: [],
   },
 ];
 
