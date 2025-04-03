@@ -17,6 +17,10 @@ import { Exerience } from "./components/Experience";
 import { FixItModal } from "./components/FixItModal";
 import { Experiences } from "./components/Experiences";
 import { RainbowText } from "./components/RainbowText";
+
+/**
+ * Context
+ */
 import { IsBrokenProvider } from "./components/IsBrokenContext";
 
 const Container = styled.div({
@@ -33,6 +37,7 @@ const Container = styled.div({
 const App: FC = () => (
   <IsBrokenProvider>
     <GlobalStyles />
+
     <FixItModal />
 
     <main>
@@ -68,7 +73,7 @@ const App: FC = () => (
 
         <Section title="Education">
           <Exerience
-            jobTitle="BACHELOR, Computer Science"
+            jobTitle="BACHELOR, Computer Science | Information systems and technologies (in economics)"
             company="Belarusian State University of
 Informatics and Radioelectronics"
             startDate="2011"

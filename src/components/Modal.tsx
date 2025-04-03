@@ -1,6 +1,5 @@
-import { FC, useEffect } from "react";
 import styled from "@emotion/styled";
-import { useIsBroken } from "./IsBrokenContext";
+import { FC, useEffect } from "react";
 
 interface Props {
   isOpen: boolean;
@@ -23,11 +22,11 @@ const Overlay = styled.div({
 
 const ModalContainer = styled.div({
   backgroundColor: "white",
-  padding: "20px",
-  borderRadius: "8px",
+  padding: 20,
+  borderRadius: 8,
   position: "relative",
-  minWidth: "300px",
-  maxWidth: "500px",
+  minWidth: 300,
+  maxWidth: 500,
   fontFamily: "Newsreader, serif",
   fontSize: 18,
   textAlign: "center",
@@ -36,16 +35,15 @@ const ModalContainer = styled.div({
 
 const CloseButton = styled.button({
   position: "absolute",
-  top: "10px",
-  right: "10px",
+  top: 10,
+  right: 10,
   background: "none",
   border: "none",
-  fontSize: "16px",
+  fontSize: 16,
   cursor: "pointer",
 });
 
 export const Modal: FC<Props> = ({ isOpen, onClose, children }) => {
-  // Close the modal when clicking outside the modal
   const handleClose = (e: React.MouseEvent) => {
     if ((e.target as HTMLElement).id === "modal-overlay") {
       onClose();
@@ -53,14 +51,12 @@ export const Modal: FC<Props> = ({ isOpen, onClose, children }) => {
   };
 
   useEffect(() => {
-    // Optionally add a scroll lock to prevent background scrolling when the modal is open
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
     }
 
-    // Cleanup on component unmount
     return () => {
       document.body.style.overflow = "auto";
     };

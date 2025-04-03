@@ -1,6 +1,11 @@
 import styled from "@emotion/styled";
 import { CSSProperties, FC } from "react";
 
+/**
+ * Context
+ */
+import { useIsBroken } from "./IsBrokenContext";
+
 interface Props {
   flexDirection?: CSSProperties["flexDirection"];
   listItems: string[];
@@ -30,12 +35,24 @@ export const List: FC<Props> = ({
   listItems,
   flexDirection,
   listItemsView,
-}) => (
-  <Container flexDirection={flexDirection}>
-    {listItems.map((listItem, index) => (
-      <ListItem key={`list-item-${index}`} listItemsView={listItemsView}>
-        {listItem}
-      </ListItem>
-    ))}
-  </Container>
-);
+}) => {
+  const { isBroken } = useIsBroken();
+
+  return (
+    <Container
+      flexDirection={flexDirection}
+      style={{
+        ...(isBroken && {
+          gap: 0,
+          flexDirection: "column",
+        }),
+      }}
+    >
+      {listItems.map((listItem, index) => (
+        <ListItem key={`list-item-${index}`} listItemsView={listItemsView}>
+          {listItem}
+        </ListItem>
+      ))}
+    </Container>
+  );
+};

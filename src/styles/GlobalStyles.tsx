@@ -18,8 +18,9 @@ export const GlobalStyles = () => {
   if (!isBroken) {
     return (
       <>
-        <Global styles={resetStylesCss} />
-        <Global styles={globalStylesCss} />
+        {[resetStylesCss, globalStylesCss].map((styles) => (
+          <Global styles={styles} />
+        ))}
       </>
     );
   }

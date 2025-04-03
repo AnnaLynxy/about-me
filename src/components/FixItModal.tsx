@@ -5,6 +5,10 @@ import styled from "@emotion/styled";
  * Components
  */
 import { Modal } from "./Modal";
+
+/**
+ * Context
+ */
 import { useIsBroken } from "./IsBrokenContext";
 
 const Button = styled.button({
@@ -18,6 +22,7 @@ const Button = styled.button({
   fontFamily: "Newsreader, serif",
   textAlign: "center",
   lineHeight: 1.5,
+  transition: "all 0.2s ease",
 
   "&:hover": {
     background: "#eee",
@@ -47,7 +52,7 @@ export const FixItModal: FC = () => {
         <>
           <p>
             Uh Oh! Seems that everything is a little bit off :(
-            <br /> But no worries, I've already fixed it! 🛠️
+            <br /> But no worries, I've already fixed it 🛠️
           </p>
 
           <Button onClick={handleClose}>Let's see!</Button>

@@ -6,6 +6,11 @@ import styled from "@emotion/styled";
  */
 import FileDownloader from "./FileDownloader";
 
+/**
+ * Context
+ */
+import { useIsBroken } from "./IsBrokenContext";
+
 const List = styled.ul({
   display: "flex",
   flexDirection: "column",
@@ -39,10 +44,26 @@ const Container = styled.header({
 });
 
 export const Header: FC = () => {
+  const { isBroken } = useIsBroken();
+
   return (
-    <Container>
+    <Container
+      style={{
+        ...(isBroken && {
+          gap: 0,
+          flexDirection: "column",
+        }),
+      }}
+    >
       <address>
-        <List>
+        <List
+          style={{
+            ...(isBroken && {
+              gap: 0,
+              flexDirection: "column",
+            }),
+          }}
+        >
           <li>
             👩‍💻
             <a href="https://github.com/AnnaLynxy" target="_blank">
@@ -76,8 +97,8 @@ export const Header: FC = () => {
       </address>
 
       <FileDownloader
-        fileName="GrigorievResume"
-        filePath="/GrigorievResume.pdf"
+        fileName="GrigorievResume.pdf"
+        filePath="/about-me/GrigorievResume.pdf"
         buttonTitle="Resume"
       />
     </Container>
