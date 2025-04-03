@@ -55,16 +55,27 @@ const App: FC = () => (
             listItemsView="tags"
             flexDirection="row"
             listItems={[
-              "React.js",
-              "JavaScript",
+              "JavaScript: ES6+",
               "TypeScript",
-              "GraphQL",
-              "Apollo",
-              "HTML/CSS",
-              "Bundlers: Webpack, Vite",
-              "Testing: Cypress, Jest, React Testing Library",
+              "React.js",
+              "HTML5/CSS3",
+              "Emotion CSS",
+              "Tailwind CSS",
+              "Responsive Design",
+              "Web Accessibility (a11y)",
               "Storybook",
-              "Auth0",
+              "Apollo Client",
+              "API Context",
+              "Redux",
+              "GraphQL/Apollo",
+              "REST",
+              "Vite",
+              "Webpack",
+              "Cypress",
+              "Jest",
+              "React Testing Library",
+              "MongoDB",
+              "PostgreSQL",
             ]}
           />
         </Section>
