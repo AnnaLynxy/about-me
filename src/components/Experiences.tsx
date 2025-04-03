@@ -60,7 +60,7 @@ const EXPERIENCES: ExperienceType[] = [
   },
   {
     jobTitle: "WEB DEVELOPER",
-    company: "Astronim",
+    company: "Astronim*",
     startDate: "02/2014",
     endDate: "05/2015",
   },
