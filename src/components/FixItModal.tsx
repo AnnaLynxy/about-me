@@ -36,7 +36,7 @@ export const FixItModal: FC = () => {
   useEffect(() => {
     setTimeout(() => {
       setModalOpen(true);
-    }, 1500);
+    }, 2500);
   }, []);
 
   return (
