@@ -16,7 +16,7 @@ const List = styled.ul({
   flexDirection: "column",
   gap: 10,
 
-  "@media (min-width: 1024px)": {
+  "@media (min-width: 1200px)": {
     flexDirection: "row",
     gap: 40,
   },
@@ -36,7 +36,7 @@ const Container = styled.header({
   flexDirection: "column",
   gap: 10,
 
-  "@media (min-width: 1024px)": {
+  "@media (min-width: 1200px)": {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
