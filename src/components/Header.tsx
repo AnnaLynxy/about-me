@@ -16,8 +16,12 @@ const List = styled.ul({
   flexDirection: "column",
   gap: 10,
 
-  "@media (min-width: 1200px)": {
+  "@media (min-width: 1280px)": {
     flexDirection: "row",
+    gap: 20,
+  },
+
+  "@media (min-width: 1366px)": {
     gap: 40,
   },
 
@@ -32,11 +36,10 @@ const Container = styled.header({
   marginBottom: 40,
   display: "flex",
   alignItems: "flex-start",
-
   flexDirection: "column",
   gap: 10,
 
-  "@media (min-width: 1200px)": {
+  "@media (min-width: 1280px)": {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
